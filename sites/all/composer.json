@@ -1,0 +1,6 @@
+require './vendor/autoload.php';
+{
+    "require": {
+        "netcarver/textile": "3.6.*"
+    }
+}
