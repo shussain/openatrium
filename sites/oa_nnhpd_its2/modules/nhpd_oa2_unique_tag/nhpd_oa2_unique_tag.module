@@ -108,6 +108,10 @@ function nhpd_oa2_unique_tag_regenerate_unique_tag($node){
 	else {
 		$title = $new_tag .':' . $title;
 	}
+  // truncate long title to allowed length 
+  if (strlen($title) > 255) {
+    $title = truncate_utf8($title, 252, true, true);
+  }
 	return $title;
 }
 function nhpd_oa2_unique_tag_remove_unique_tag($node){
