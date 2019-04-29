@@ -1,9 +1,0 @@
-{
-    "name": "drupal/nhpd_oa2",
-    "type": "drupal-module",
-    "description": "",
-    "require": {
-        "php": ">=5.2.0",
-        "netcarver/textile": ">=3.7.1"
-    }
-}

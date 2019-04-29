@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the OA ITS panelizer feature.
- */
-
-include_once 'oa_its_panelizer.features.inc';
