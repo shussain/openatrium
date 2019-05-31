@@ -86,6 +86,7 @@ function admin_form($form, &$form_state = NULL) {
                 'load_chiliproject_wiki_data' => 'Migrate Chiliproject Wiki data',
                 'delete_all_nodes_by_type' => 'Delete All Nodes by type',*/
                 'code_testing'  => 'Test php code',
+		'node_structure_report' => "Node Structure Report",
                  ));
 
  // }
@@ -917,9 +918,9 @@ function delete_all_nodes_by_type_form($form_state = NULL) {
   return $form;
 }
 function code_testing($form_state = NULL) {
-  $allowed_users = array('peijun');
+  $allowed_users = array(1);
   global $user;
-  if (!(in_array($user -> name, $allowed_users))) {
+  if (!(in_array($user -> uid, $allowed_users))) {
     $form['permission'] = array(
       '#title' => 'Permission',
       '#type' => 'item',

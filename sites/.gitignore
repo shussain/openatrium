@@ -1,0 +1,12 @@
+# Ignore configuration files that may contain sensitive information.
+./*/settings*.php
+
+# Ignore paths that contain user-generated content.
+./*/files
+./*/private
+
+# Ignore sites.php
+./sites.php
+# some sites
+./oa_nnhpd_its2
+./oa_test
