@@ -4,3 +4,10 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+
+# Ignore sites.php
+sites/sites.php
+# some sites
+sites/oa_nnhpd_its2
+sites/oa_test
+
