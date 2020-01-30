@@ -4,14 +4,10 @@ screenshot  = screenshot.png
 core        = 7.x
 
 ; CSS - General
-stylesheets[all][]     = assets/stylesheets/radix-style.css
-stylesheets[print][]   = assets/stylesheets/radix-print.css
-
-; CSS - Conditional
-stylesheets-conditional[lte IE 9][all][] = assets/stylesheets/ie.css
+stylesheets[all][] = assets/css/radix.style.css
 
 ; Javascript
-scripts[] = assets/javascripts/radix-script.js
+scripts[] = assets/js/radix.script.js
 
 ; Regions
 regions[sidebar_first] = Sidebar
@@ -26,7 +22,11 @@ features[] = logo
 features[] = name
 features[] = favicon
 
-; Information added by drush on 2015-10-22
-version = "7.x-3.0+0-dev"
+; Settings
+settings[main_menu_max_depth] = 2
+
+; Information added by Drupal.org packaging script on 2020-01-15
+version = "7.x-3.8"
+core = "7.x"
 project = "radix"
-datestamp = "1445548047"
+datestamp = "1579110795"
