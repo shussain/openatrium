@@ -5,7 +5,7 @@ core = 7.x
 
 ; Drupal Core
 projects[drupal][type] = core
-projects[drupal][version] = 7.67
+projects[drupal][version] = 7.70
 
 ; ***** Patches from Panopoly *******
 ; Bug with image styles on database update
@@ -13,6 +13,9 @@ projects[drupal][patch][1973278] = http://www.drupal.org/files/issues/image-acco
 ; ***** End of Panopoly patches *****
 
 ; *********** PATCHES ************
+
+; Patch for jQuery Ajax issue in Chrome 83
+projects[drupal][patch][3143016] = https://www.drupal.org/files/issues/2020-05-27/3143016-19.patch
 
 ; Patch for handling inherited profiles
 projects[drupal][patch][1356276] = http://drupal.org/files/1356276-make-D7-21.patch
@@ -24,7 +27,7 @@ projects[drupal][patch][1349080] = https://www.drupal.org/files/issues/1349080-1
 projects[drupal][patch][911354] = http://drupal.org/files/911354-drupal-profile-85.patch
 
 ; Patch to allow install profile enabling to enable dependencies correctly.
-projects[drupal][patch][1093420] = http://drupal.org/files/1093420-22.patch
+projects[drupal][patch][1093420] = https://www.drupal.org/files/issues/2019-04-25/1093420-33.patch
 
 ; Patch to prevent empty titles when menu_check_access called more than once
 projects[drupal][patch][1697570] = http://drupal.org/files/drupal-menu_always_load_objects-1697570-5.patch

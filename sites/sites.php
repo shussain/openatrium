@@ -54,7 +54,8 @@
  * @see http://drupal.org/documentation/install/multi-site
  */
 
-$hostname='10.158.46.207';
+//$hostname='10.158.46.207';
+$hostname='192.168.1.21';
 //$hostname=getenv('HOSTNAME');
 //URL: http://10.158.46.206/oa_test
 $sites["$hostname.oa_test"]='oa_test';

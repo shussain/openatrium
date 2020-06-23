@@ -1000,6 +1000,7 @@ class view extends views_db_object {
     // Let the handlers interact with each other if they really want.
     $this->_pre_query();
 
+    $exposed_form = FALSE;
     if ($this->display_handler->uses_exposed()) {
       $exposed_form = $this->display_handler->get_plugin('exposed_form');
       // (1) Record the errors before rendering the exposed form widgets.
@@ -1080,7 +1081,7 @@ class view extends views_db_object {
     $this->style_plugin->query($this->display_handler->use_group_by());
 
     // Allow exposed form to affect the query.
-    if (isset($exposed_form)) {
+    if ($exposed_form) {
       $exposed_form->query();
     }
 
@@ -2012,7 +2013,8 @@ class view extends views_db_object {
   public function clone_view() {
     $clone = clone $this;
 
-    $keys = array('current_display', 'display_handler', 'build_info', 'built', 'executed', 'attachment_before', 'attachment_after', 'field', 'argument', 'filter', 'sort', 'relationship', 'header', 'footer', 'empty', 'query', 'inited', 'style_plugin', 'plugin_name', 'exposed_data', 'exposed_input', 'exposed_widgets', 'many_to_one_aliases', 'many_to_one_tables', 'feed_icon');
+    $keys = array('current_display', 'display_handler', 'build_info', 'built', 'executed', 'attachment_before', 'attachment_after', 'field', 'argument', 'filter', 'sort', 'relationship', 'header', 'footer', 'empty', 'query', 'inited', 'style_plugin', 'plugin_name', 'exposed_data', 'exposed_input', 'exposed_widgets', 'many_to_one_aliases', 'many_to_one_tables', 'feed_icon', 'dom_id');
+
     foreach ($keys as $key) {
       if (isset($clone->{$key})) {
         unset($clone->{$key});
@@ -2077,7 +2079,7 @@ class view extends views_db_object {
       unset($this->query);
     }
 
-    $keys = array('current_display', 'display_handler', 'build_info', 'built', 'executed', 'attachment_before', 'attachment_after', 'field', 'argument', 'filter', 'sort', 'relationship', 'header', 'footer', 'empty', 'query', 'result', 'inited', 'style_plugin', 'plugin_name', 'exposed_data', 'exposed_input', 'many_to_one_tables');
+    $keys = array('current_display', 'display_handler', 'build_info', 'built', 'executed', 'attachment_before', 'attachment_after', 'field', 'argument', 'filter', 'sort', 'relationship', 'header', 'footer', 'empty', 'query', 'result', 'inited', 'style_plugin', 'plugin_name', 'exposed_data', 'exposed_input', 'many_to_one_tables', 'dom_id');
     foreach ($keys as $key) {
       if (isset($this->$key)) {
         unset($this->$key);
